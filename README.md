@@ -9,3 +9,6 @@ from docker container 2 host:
 localhost (host) -> host
 localhost (container) -> container
 host.docker.internal:
+
+Container: linux kernel space, control group (cgroup), seccomp (allow/deny system call), SELinux
+
