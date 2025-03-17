@@ -12,3 +12,10 @@ host.docker.internal:
 
 Container: linux kernel space, control group (cgroup), seccomp (allow/deny system call), SELinux
 
+Container run time: runC, cri-o, docker
+
+build tool: buildah, podman, docker
+container management tool: docker, podman, kubernetes
+
+
+
