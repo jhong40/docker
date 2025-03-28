@@ -18,4 +18,29 @@ build tool: buildah, podman, docker
 container management tool: docker, podman, kubernetes
 
 
+# user defined network is better than default network
+## user defined network has DNS enabled
+```
+docker network ls  # bridge, host, null
+docker network create --driver bridge mybridge  # create mybridge using bridge driver. --driver bridge is the default
+
+docker network create mybridge   # same as above
+docker inspect network mybridge  # inspect mybridge network. it has subnet, gateway
+docker container run -dt --name mycontainer1 --network mybridge ubuntu  # create ubuntu container in mynetwork
+docker container run -dt --name mycontainer2 --network mybridge ubuntu  # create ubuntu container in mynetwork
+docker inspect network mybridge  # will show 2 containers with ips in this network
+docker exec -it mycontainer1 ping mycontainer2/www.google.com   # will work, not work in default network
+
+``` 
+
+
+
+
+
+
+
+
+
+
+
 
