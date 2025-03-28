@@ -19,8 +19,8 @@ container management tool: docker, podman, kubernetes
 
 
 # Bridge Network  - default bridge network, user-defined network
-## user defined network provide auto DNS resolution btw containers
-## container can be attached or detached from the user-defined network on the fly
+- user defined network provide auto DNS resolution btw containers
+- container can be attached or detached from the user-defined network on the fly
 ```
 docker network ls  # bridge, host, null
 docker network create --driver bridge mybridge  # create mybridge using bridge driver. --driver bridge is the default
