@@ -36,7 +36,7 @@ docker exec -it mycontainer1 ping mycontainer2   # will work, not work in defaul
 ```
 docker container run -dt --name mycontainer --network host nginx   # it open the 80 on the host, no -p80:80
 ```
-# none Network
+# None Network
 ```
 docker container run -dt --name mycontainer --network none nginx
 docker exec -it mycontainer bash
