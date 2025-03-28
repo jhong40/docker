@@ -32,7 +32,22 @@ docker container run -dt --name mycontainer2 --network mybridge ubuntu  # create
 docker inspect network mybridge  # will show 2 containers with ips in this network
 docker exec -it mycontainer1 ping mycontainer2   # will work, not work in default network
 ``` 
-# Host Network
+# Host Network  - share the same network with the Host.  
+```
+docker container run -dt --name mycontainer --network host nginx   # it open the 80 on the host, no -p80:80
+```
+# none Network
+```
+docker container run -dt --name mycontainer --network none nginx
+docker exec -it mycontainer bash
+  ifconfig # only show lo (local network), no eth
+```
+
+
+
+
+
+
 
 
 
