@@ -38,7 +38,7 @@ docker container run -dt --name mycontainer --network host nginx   # it open the
 ```
 # None Network
 ```
-docker container run -dt --name mycontainer --network none nginx
+docker container run -dt --name mycontainer --network none nginx   # cannot access from anywhere except http://127.0.0.1 on the container
 docker exec -it mycontainer bash
   ifconfig # only show lo (local network), no eth
 ```
